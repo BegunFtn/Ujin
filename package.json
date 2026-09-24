@@ -1,0 +1,22 @@
+{
+  "name": "firstfly-travel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "next": "16.3.6",
+    "next-themes": "latest",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4"
+  }
+}
