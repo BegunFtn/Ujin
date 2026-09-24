@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const images = [
-  "/images/slide-1.jpg",
-  "/images/slide-2.jpg",
-  "/images/slide-3.jpg",
-  "/images/slide-4.jpg",
-  "/images/slide-5.jpg",
-  "/images/slide-6.jpg",
+  "/images/slide1.jpg",
+  "/images/slide2.jpg",
+  "/images/slide3.jpg",
+  "/images/slide4.jpg",
+  "/images/slide5.jpg",
+  "/images/slide6.jpg",
 ];
 
 export default function ImageSlider() {

@@ -88,8 +88,8 @@ export default function Header() {
             aria-label="FirstFly home"
           >
             <Image
-              src="/logo/firstfly.svg"
-              alt="FirstFly"
+              src="/logo/molor-tur-logo-theme.svg"
+              alt="MolorTur"
               fill
               priority
               className="

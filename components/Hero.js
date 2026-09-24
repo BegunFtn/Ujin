@@ -5,11 +5,11 @@ import { useState } from "react";
 import DestinationPreview from "@/components/DestinationPreview";
 
 const images = [
-  "/images/hero-new.jpg",
-  "/images/slide-1.jpg",
-  "/images/slide-2.jpg",
-  "/images/slide-3.jpg",
-  "/images/slide-4.jpg",
+  "/images/heronew.jpg",
+  // "/images/slider-1.jpg",
+  // "/images/slider-2.jpg",
+  // "/images/slider-3.jpg",
+  // "/images/slider-4.jpg",
 ];
 
 export default function Hero() {

@@ -75,8 +75,8 @@ export default function Footer() {
               className="relative block h-[45px] w-[120px]"
             >
               <Image
-                src="/logo/firstfly.svg"
-                alt="FirstFly"
+                src="/logo/molor-tur-logo-theme.svg"
+                alt="MolorTur"
                 fill
                 className="object-contain object-left dark:brightness-0 dark:invert"
               />
@@ -84,7 +84,7 @@ export default function Footer() {
 
             <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-400">
               Discover amazing places and create unforgettable
-              memories with FirstFly.
+              memories with MolorTur.
             </p>
           </div>
 
@@ -139,11 +139,13 @@ export default function Footer() {
             </h3>
 
             <div className="flex flex-col gap-3 text-sm text-slate-600 dark:text-slate-400">
-              <span>Maldives</span>
-              <span>Bali</span>
-              <span>Thailand</span>
-              <span>Vietnam</span>
-              <span>Japan</span>
+              <span>Сайншанд</span>
+              <span>Данзанравжаагийн музей</span>
+              <span>Сайншандын орон нутгийн музей</span>
+              <span>Дэмчигийн хийд</span>
+              <span>Шамбалын орон</span>
+              <span>Хамрын хийд</span>
+              <span>Бүрдэнэ булаг</span>
             </div>
           </div>
 
@@ -173,7 +175,10 @@ export default function Footer() {
                 />
 
                 <span>
-                  +976 9999 9999
+                  +976 96000421
+                </span>
+                <span>
+                  +976 96660371
                 </span>
               </div>
 

@@ -2,12 +2,13 @@ export const khamarTrip = {
   title: "Хамрын хийд",
   duration: "5 өдөр 3 шөнийн аялал",
   subtitle: "Сүнслэг аялал — Түүх, соёл, байгаль",
+  image: "/images/khamar/hero.jpg",
 
   days: [
     {
       day: 1,
       title: "Улаанбаатар → Сайншанд",
-      image: "/images/khamar/day-1.jpg",
+      image: "/images/khamar/day1.jpg",
 
       activities: [
         "08:00 Улаанбаатараас Сайншанд руу хөдөлнө (ойролцоогоор 460 км, 6–7 цаг)",
@@ -23,7 +24,7 @@ export const khamarTrip = {
     {
       day: 2,
       title: "Сайншанд → Хамрын хийд",
-      image: "/images/khamar/day-2.jpg",
+      image: "/images/khamar/day2.jpg",
 
       activities: [
         "Өглөө Хамрын хийд рүү хөдөлнө (ойролцоогоор 90 км, 1.5–2 цаг)",
@@ -39,7 +40,7 @@ export const khamarTrip = {
     {
       day: 3,
       title: "Дорноговь",
-      image: "/images/khamar/day-3.jpg",
+      image: "/images/khamar/day3.jpg",
 
       activities: [
         "Сайншандын орон нутгийн музей, Данзанравжаагийн музей",
@@ -55,7 +56,7 @@ export const khamarTrip = {
     {
       day: 4,
       title: "Сайншанд → Улаанбаатар",
-      image: "/images/khamar/day-4.jpg",
+      image: "/images/khamar/day4.jpg",
 
       activities: [
         "Өглөө эрт замд гарна (ойролцоогоор 460 км, 6–7 цаг)",
@@ -71,7 +72,7 @@ export const khamarTrip = {
     {
       day: 5,
       title: "Улаанбаатар",
-      image: "/images/khamar/day-5.jpg",
+      image: "/images/khamar/day5.jpg",
 
       activities: [
         "Өглөө чөлөөт цаг",

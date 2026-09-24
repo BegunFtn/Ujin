@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* ================= HERO ================= */}
       <section className="relative min-h-[720px] overflow-hidden">
         <Image
-          src="/images/about/about-hero.jpg"
+          src="/images/about/hero.jpg"
           alt={khamarTrip.title}
           fill
           priority

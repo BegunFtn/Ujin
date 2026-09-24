@@ -1,8 +1,0 @@
-<svg width="240" height="90" viewBox="0 0 240 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(11 7)">
-    <path d="M36 6L46 28L67 34L48 42L40 66L30 43L7 36L28 27L36 6Z" fill="#67CAF0"/>
-    <path d="M8 55L28 45L39 50L20 63L8 55Z" fill="#1D4ED8"/>
-    <path d="M31 12L40 30L32 33L24 16L31 12Z" fill="#0F172A"/>
-  </g>
-  <text x="80" y="57" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800" fill="#111111">FirstFly</text>
-</svg>
