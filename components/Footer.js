@@ -1,11 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-import {
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { useLanguage } from "@/context/LanguageProvider";
 
 function FacebookIcon({ size = 20 }) {
   return (
@@ -34,46 +32,30 @@ function InstagramIcon({ size = 20 }) {
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <rect
-        x="3"
-        y="3"
-        width="18"
-        height="18"
-        rx="5"
-        ry="5"
-      />
-
-      <circle
-        cx="12"
-        cy="12"
-        r="4"
-      />
-
-      <circle
-        cx="17.5"
-        cy="6.5"
-        r="1"
-        fill="currentColor"
-        stroke="none"
-      />
+      <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
     </svg>
   );
 }
 
 export default function Footer() {
+  const { t } = useLanguage();
+
+  const links = [
+    [t.header.home, "/"],
+    [t.header.about, "/about"],
+    [t.header.tour, "/tour"],
+    // [t.header.package, "/package"],
+    [t.header.contact, "/contact"],
+  ];
+
   return (
     <footer className="border-t border-black/10 bg-[#f1f1f1] transition-colors duration-500 dark:border-white/10 dark:bg-[#0c0e10]">
-
       <div className="mx-auto max-w-[1120px] px-6 py-12">
-
         <div className="grid gap-10 md:grid-cols-4">
-
-          {/* LOGO */}
           <div>
-            <Link
-              href="/"
-              className="relative block h-[45px] w-[120px]"
-            >
+            <Link href="/" className="relative block h-[45px] w-[120px]">
               <Image
                 src="/logo/molor-tur-logo-theme.svg"
                 alt="MolorTur"
@@ -83,140 +65,72 @@ export default function Footer() {
             </Link>
 
             <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-400">
-              Discover amazing places and create unforgettable
-              memories with MolorTur.
+              {t.footer.description}
             </p>
           </div>
 
-          {/* QUICK LINKS */}
           <div>
             <h3 className="mb-4 font-bold text-black dark:text-white">
-              Quick Links
+              {t.footer.quickLinks}
             </h3>
 
             <div className="flex flex-col gap-3">
-              <Link
-                href="/"
-                className="text-sm text-slate-600 transition hover:text-[#55c4ec] dark:text-slate-400"
-              >
-                Home
-              </Link>
-
-              <Link
-                href="/about"
-                className="text-sm text-slate-600 transition hover:text-[#55c4ec] dark:text-slate-400"
-              >
-                About
-              </Link>
-
-              <Link
-                href="/tour"
-                className="text-sm text-slate-600 transition hover:text-[#55c4ec] dark:text-slate-400"
-              >
-                Tour
-              </Link>
-
-              <Link
-                href="/package"
-                className="text-sm text-slate-600 transition hover:text-[#55c4ec] dark:text-slate-400"
-              >
-                Package
-              </Link>
-
-              <Link
-                href="/contact"
-                className="text-sm text-slate-600 transition hover:text-[#55c4ec] dark:text-slate-400"
-              >
-                Contact
-              </Link>
+              {links.map(([label, href]) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-sm text-slate-600 transition hover:text-[#55c4ec] dark:text-slate-400"
+                >
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* DESTINATIONS */}
           <div>
             <h3 className="mb-4 font-bold text-black dark:text-white">
-              Destinations
+              {t.footer.destinations}
             </h3>
 
             <div className="flex flex-col gap-3 text-sm text-slate-600 dark:text-slate-400">
-              <span>Сайншанд</span>
-              <span>Данзанравжаагийн музей</span>
-              <span>Сайншандын орон нутгийн музей</span>
-              <span>Дэмчигийн хийд</span>
-              <span>Шамбалын орон</span>
-              <span>Хамрын хийд</span>
-              <span>Бүрдэнэ булаг</span>
+              {t.footer.destinationNames.map((name) => (
+                <span key={name}>{name}</span>
+              ))}
             </div>
           </div>
 
-          {/* CONTACT */}
           <div>
             <h3 className="mb-4 font-bold text-black dark:text-white">
-              Contact
+              {t.footer.contact}
             </h3>
 
             <div className="flex flex-col gap-4 text-sm text-slate-600 dark:text-slate-400">
-
               <div className="flex items-center gap-3">
-                <MapPin
-                  size={18}
-                  className="text-[#55c4ec]"
-                />
-
-                <span>
-                  Ulaanbaatar, Mongolia
-                </span>
+                <MapPin size={18} className="text-[#55c4ec]" />
+                <span>{t.footer.location}</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone
-                  size={18}
-                  className="text-[#55c4ec]"
-                />
-
-                <span>
-                  +976 96000421
-                </span>
-                <span>
-                  +976 96660371
-                </span>
+                <Phone size={18} className="text-[#55c4ec]" />
+                <span>+976 96000421</span>
+                <span>+976 96660371</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <Mail
-                  size={18}
-                  className="text-[#55c4ec]"
-                />
-
-                <span>
-                  hello@firstfly.com
-                </span>
+                <Mail size={18} className="text-[#55c4ec]" />
+                <span>sandtur79@gmail.com</span>
               </div>
-
             </div>
 
-            {/* SOCIAL ICONS */}
             <div className="mt-6 flex gap-3">
-
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61594147902258"
                 aria-label="Facebook"
                 className="
-                  flex h-10 w-10
-                  items-center justify-center
-                  rounded-full
-                  bg-white
-                  text-slate-700
-                  shadow-sm
-                  transition
-
-                  hover:-translate-y-1
-                  hover:bg-[#55c4ec]
-                  hover:text-white
-
-                  dark:bg-white/10
-                  dark:text-white
-                  dark:hover:bg-[#55c4ec]
+                  flex h-10 w-10 items-center justify-center rounded-full
+                  bg-white text-slate-700 shadow-sm transition
+                  hover:-translate-y-1 hover:bg-[#55c4ec] hover:text-white
+                  dark:bg-white/10 dark:text-white dark:hover:bg-[#55c4ec]
                 "
               >
                 <FacebookIcon size={20} />
@@ -226,72 +140,39 @@ export default function Footer() {
                 href="#"
                 aria-label="Instagram"
                 className="
-                  flex h-10 w-10
-                  items-center justify-center
-                  rounded-full
-                  bg-white
-                  text-slate-700
-                  shadow-sm
-                  transition
-
-                  hover:-translate-y-1
-                  hover:bg-[#55c4ec]
-                  hover:text-white
-
-                  dark:bg-white/10
-                  dark:text-white
-                  dark:hover:bg-[#55c4ec]
+                  flex h-10 w-10 items-center justify-center rounded-full
+                  bg-white text-slate-700 shadow-sm transition
+                  hover:-translate-y-1 hover:bg-[#55c4ec] hover:text-white
+                  dark:bg-white/10 dark:text-white dark:hover:bg-[#55c4ec]
                 "
               >
                 <InstagramIcon size={20} />
               </a>
-
             </div>
           </div>
         </div>
       </div>
 
-      {/* BOTTOM */}
       <div className="border-t border-black/10 dark:border-white/10">
-
-        <div
-          className="
-            mx-auto
-            flex
-            max-w-[1120px]
-            flex-col
-            items-center
-            justify-between
-            gap-3
-            px-6
-            py-5
-
-            sm:flex-row
-          "
-        >
-          <p className="text-xs text-slate-500">
-            © 2026 FirstFly. All rights reserved.
-          </p>
+        <div className="mx-auto flex max-w-[1120px] flex-col items-center justify-between gap-3 px-6 py-5 sm:flex-row">
+          <p className="text-xs text-slate-500">{t.footer.rights}</p>
 
           <div className="flex gap-5">
-
             <a
               href="#"
               className="text-xs text-slate-500 transition hover:text-[#55c4ec]"
             >
-              Privacy Policy
+              {t.footer.privacy}
             </a>
 
             <a
               href="#"
               className="text-xs text-slate-500 transition hover:text-[#55c4ec]"
             >
-              Terms
+              {t.footer.terms}
             </a>
-
           </div>
         </div>
-
       </div>
     </footer>
   );

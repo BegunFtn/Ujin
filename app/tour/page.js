@@ -1,9 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
-import { khamarTrip } from "@/data/khamarTrip";
+import { getKhamarTrip } from "@/data/khamarTrip";
+import { useLanguage } from "@/context/LanguageProvider";
 
-export default function AboutPage() {
+export default function TourPage() {
+  const { language, t } = useLanguage();
+  const trip = getKhamarTrip(language);
+
   return (
     <div className="bg-[#071f29] text-white">
 
@@ -11,7 +17,7 @@ export default function AboutPage() {
       <section className="relative min-h-[720px] overflow-hidden">
         <Image
           src="/images/about/hero.jpg"
-          alt={khamarTrip.title}
+          alt={trip.title}
           fill
           priority
           className="object-cover"
@@ -32,7 +38,7 @@ export default function AboutPage() {
               [writing-mode:vertical-rl]
             "
           >
-            Explore Mongolia
+            {t.about.exploreMongolia}
           </p>
         </div>
 
@@ -62,7 +68,7 @@ export default function AboutPage() {
                 text-[#f4cc75]
               "
             >
-              {khamarTrip.subtitle}
+              {trip.subtitle}
             </p>
 
             <h1
@@ -74,14 +80,14 @@ export default function AboutPage() {
                 md:text-[72px]
               "
             >
-              {khamarTrip.title}
+              {trip.title}
               <br />
-              {khamarTrip.duration}
+              {trip.duration}
             </h1>
 
             <div className="mt-8 flex justify-center gap-5">
               <Link
-                href="/tour"
+                href="#tour-program"
                 className="
                   border-b
                   border-[#f4cc75]
@@ -93,7 +99,7 @@ export default function AboutPage() {
                   text-[#f4cc75]
                 "
               >
-                Аяллын хөтөлбөр
+                {t.about.program}
               </Link>
 
               <Link
@@ -109,15 +115,16 @@ export default function AboutPage() {
                   text-white/80
                 "
               >
-                Холбоо барих
+                {t.about.contact}
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= 5 DAY ROTATION ================= */}
-      {khamarTrip.days.map((day, index) => {
+      {/* ================= TOUR PROGRAM ================= */}
+      <div id="tour-program">
+      {trip.days.map((day, index) => {
         const imageLeft = index % 2 === 1;
 
         return (
@@ -195,7 +202,7 @@ export default function AboutPage() {
                   text-[#f4cc75]
                 "
               >
-                Day {String(day.day).padStart(2, "0")}
+                {t.about.day} {String(day.day).padStart(2, "0")}
               </span>
             </div>
 
@@ -262,7 +269,7 @@ export default function AboutPage() {
                       text-[#f4cc75]
                     "
                   >
-                    Destination
+                    {t.about.destination}
                   </p>
 
                   <p className="mt-1 font-serif text-xl text-white">
@@ -406,7 +413,7 @@ export default function AboutPage() {
             >
               <p>
                 <span className="font-semibold text-[#f4cc75]">
-                  Тээвэр
+                  {t.about.transport}
                 </span>
 
                 <span className="mx-2 text-white/20">—</span>
@@ -416,7 +423,7 @@ export default function AboutPage() {
 
               <p>
                 <span className="font-semibold text-[#f4cc75]">
-                  Хоол
+                  {t.about.food}
                 </span>
 
                 <span className="mx-2 text-white/20">—</span>
@@ -426,7 +433,7 @@ export default function AboutPage() {
 
               <p>
                 <span className="font-semibold text-[#f4cc75]">
-                  Буудал
+                  {t.about.hotel}
                 </span>
 
                 <span className="mx-2 text-white/20">—</span>
@@ -452,7 +459,7 @@ export default function AboutPage() {
                 text-[#f4cc75]
               "
             >
-              Дэлгэрэнгүй
+              {t.about.details}
 
               <span
                 className="
@@ -514,7 +521,7 @@ export default function AboutPage() {
                   text-[#f4cc75]
                 "
               >
-                Day {String(day.day).padStart(2, "0")}
+                {t.about.day} {String(day.day).padStart(2, "0")}
               </span>
 
               <span className="h-px w-10 bg-[#f4cc75]" />
@@ -583,7 +590,7 @@ export default function AboutPage() {
                       text-[#f4cc75]
                     "
                   >
-                    Destination
+                    {t.about.destination}
                   </p>
 
                   <p className="mt-1 font-serif text-xl text-white">
@@ -623,6 +630,7 @@ export default function AboutPage() {
     </section>
   );
 })}
+      </div>
     </div>
   );
 }
