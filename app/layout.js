@@ -19,6 +19,10 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "MolorTur - Gobi Travel",
   description: "Travel website landing page",
+
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
