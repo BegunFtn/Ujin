@@ -141,11 +141,10 @@ export const translations = {
 
   mn: {
     meta: {
-      title: "FirstFly — Монгол аялал",
+      title: "MolorTur — Монгол аялал",
     },
 
     header: {
-      darkMode: "Харанхуй горим",
       home: "Нүүр",
       about: "Бидний тухай",
       tour: "Аялал",
@@ -160,7 +159,7 @@ export const translations = {
       imageAlt: "Монголын үзэсгэлэнт аяллын газар",
       kicker: "Таны адал явдал эндээс эхэлнэ",
       titleOutlineStart: "Нээ",
-      titleStart: "Монголыг",
+      titleStart: "Монголын",
       titleMiddle: "Гайхамшигт газруудаар аялж",
       titleEnd: "Дурсамжаа",
       titleOutlineEnd: "Бүтээ",

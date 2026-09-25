@@ -39,6 +39,10 @@ export default function Header() {
         <div className="flex shrink-0 items-center gap-4">
           <div className="flex w-[74px] flex-col items-center gap-1">
             <CinematicThemeSwitcher />
+
+            <span className="text-[11px] text-black dark:text-white">
+              Dark mode
+            </span>
           </div>
 
           <Link
