@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "FirstFly",
+  title: "MolorTur - Gobi Travel",
   description: "Travel website landing page",
 };
 
