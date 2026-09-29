@@ -7,10 +7,10 @@ import { useLanguage } from "@/context/LanguageProvider";
 
 const images = [
   "/images/heronew.jpg",
-  // "/images/slider-1.jpg",
-  // "/images/slider-2.jpg",
-  // "/images/slider-3.jpg",
-  // "/images/slider-4.jpg",
+  "/images/slider-1.png",
+  "/images/slider-2.png",
+  "/images/slider-3.png",
+  "/images/slider-4.png",
 ];
 
 export default function Hero() {
@@ -70,7 +70,7 @@ export default function Hero() {
             </h1>
 
             <a
-              href="/package"
+              href="/contact"
               className="
                 mt-7 inline-flex rounded-[11px] bg-[#67caf0] px-5 py-3
                 text-[13px] font-semibold text-white

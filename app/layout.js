@@ -21,7 +21,7 @@ export const metadata = {
   description: "Travel website landing page",
 
   icons: {
-    icon: "/favicon.png",
+    icon: "logo/molor-tur-logo-theme.svg",
   },
 };
 
